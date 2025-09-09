@@ -18,10 +18,41 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Format message for WhatsApp
+    const message = `
+*New Contact Form Submission*
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone || 'Not provided'}
+*Company:* ${formData.company || 'Not provided'}
+*Message:* ${formData.message}
+    `.trim();
+    
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Open WhatsApp with pre-filled message
+    window.open(`https://wa.me/919629463964?text=${encodedMessage}`, '_blank');
+    
+    // Also prepare email option
+    const emailSubject = encodeURIComponent('New Contact Form Submission - Fixus IT');
+    const emailBody = encodeURIComponent(message.replace(/\*/g, ''));
+    const mailtoLink = `mailto:fixusservices@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    
+    // Show success toast with email option
     toast({
-      title: "Message sent!",
-      description: "We'll get back to you within 24 hours.",
+      title: "Opening WhatsApp...",
+      description: (
+        <div>
+          <p>Your message is being sent via WhatsApp.</p>
+          <a href={mailtoLink} className="text-primary underline mt-2 inline-block">
+            Or send via email instead
+          </a>
+        </div>
+      ),
     });
+    
     setFormData({
       name: '',
       email: '',
