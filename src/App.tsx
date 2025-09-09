@@ -8,7 +8,6 @@ import Footer from "./components/Layout/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import ResumeToPortfolio from "./pages/ResumeToPortfolio";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -36,7 +35,6 @@ const App = () => (
           <Route path="/about" element={<Layout><About /></Layout>} />
           <Route path="/services" element={<Layout><Services /></Layout>} />
           <Route path="/services/:service" element={<Layout><Services /></Layout>} />
-          <Route path="/resume-to-portfolio" element={<Layout><ResumeToPortfolio /></Layout>} />
           <Route path="/blog" element={<Layout><Blog /></Layout>} />
           <Route path="/contact" element={<Layout><Contact /></Layout>} />
           <Route path="*" element={<Layout><NotFound /></Layout>} />

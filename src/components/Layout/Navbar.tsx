@@ -44,7 +44,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services', hasDropdown: true },
-    { name: 'Portfolio Generator', path: '/resume-to-portfolio' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -106,9 +105,15 @@ const Navbar = () => {
             >
               {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
             </Button>
-            <Button variant="hero" size="lg">
-              Get Started
-            </Button>
+            <a 
+              href="https://wa.me/919629463964" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="hero" size="lg">
+                Get Started
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -144,9 +149,16 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button variant="hero" size="lg" className="w-full mt-4">
-              Get Started
-            </Button>
+            <a 
+              href="https://wa.me/919629463964" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mt-4"
+            >
+              <Button variant="hero" size="lg" className="w-full">
+                Get Started
+              </Button>
+            </a>
           </div>
         )}
       </div>

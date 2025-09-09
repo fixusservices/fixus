@@ -16,7 +16,6 @@ const Footer = () => {
   const quickLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Portfolio Generator', path: '/resume-to-portfolio' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -126,7 +125,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="text-center text-sm text-primary-foreground/60">
-            <p>&copy; 2024 Fixus IT & Consulting Services. All rights reserved.</p>
+            <p>&copy; 2025 Fixus IT & Consulting Services. All rights reserved.</p>
             <p className="mt-2">
               <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
               {' | '}

@@ -143,17 +143,16 @@ const Home = () => {
           <p className="text-xl mb-8 opacity-90">
             Let's discuss how Fixus IT can help you achieve your goals
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
+          <div className="flex justify-center">
+            <a 
+              href="https://wa.me/919629463964" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="secondary" size="xl">
                 Get Started Today
               </Button>
-            </Link>
-            <Link to="/resume-to-portfolio">
-              <Button variant="outline" size="xl" className="bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground border-primary-foreground/20">
-                Try Portfolio Generator
-              </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

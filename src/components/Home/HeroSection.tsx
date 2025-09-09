@@ -13,7 +13,7 @@ const HeroSection = () => {
   }, []);
 
   const services = [
-    'Resume-to-Portfolio Generator',
+    'Software Development',
     'SAP Implementation',
     'IoT Solutions',
     'Cybersecurity',
@@ -47,7 +47,7 @@ const HeroSection = () => {
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6 animate-fade-in">
-            <span className="text-sm font-medium text-primary">🚀 Trusted by 100+ Businesses</span>
+            <span className="text-sm font-medium text-primary">🚀 Trusted by 10+ Businesses</span>
           </div>
 
           {/* Main Headline */}
@@ -76,12 +76,16 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style={{ animationDelay: '0.4s' }}>
-            <Link to="/contact">
+            <a 
+              href="https://wa.me/919629463964" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="hero" size="xl" className="group">
                 Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
             <Link to="/services">
               <Button variant="outline" size="xl" className="group">
                 <Play className="mr-2 h-5 w-5" />
@@ -93,15 +97,15 @@ const HeroSection = () => {
           {/* Trust Indicators */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-up" style={{ animationDelay: '0.6s' }}>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">100+</div>
+              <div className="text-3xl font-bold text-primary">20+</div>
               <div className="text-sm text-muted-foreground">Happy Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">50+</div>
+              <div className="text-3xl font-bold text-primary">30+</div>
               <div className="text-sm text-muted-foreground">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">10+</div>
+              <div className="text-3xl font-bold text-primary">2+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
