@@ -1,26 +1,25 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Play } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { ArrowRight, ChevronDown, Factory, Package, Cpu, BarChart3, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [currentService, setCurrentService] = useState(0);
+  
+  const services = [
+    'Manufacturing Solutions',
+    'Supply Chain Optimization',
+    'Industry 4.0 Integration',
+    'ERP Implementation'
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const services = [
-    'Software Development',
-    'SAP Implementation',
-    'IoT Solutions',
-    'Cybersecurity',
-    'ERP Systems',
-  ];
-
-  const [currentService, setCurrentService] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
